@@ -1,17 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {
-  htmlElementsReferences,
-  TFilesReference,
-  filesReferences,
-  THtmlElementsReference,
-} from "@rnbws/rfrncs.design";
 
 import {
   TReferenceReducerState,
   TFilesReferenceData,
-  THtmlReferenceData,
   THtmlElementsReferenceData,
+  TFilesReference,
+  THtmlElementsReference,
 } from "./types";
+import { filesReferences, htmlElementsReferences } from "./rfrncs";
 // file reference
 const _filesReferenceData: TFilesReferenceData = {};
 filesReferences.map((fileRef: TFilesReference) => {
@@ -38,14 +34,6 @@ const referenceSlice = createSlice({
   name: "reference",
   initialState: referenceReducerInitialState,
   reducers: {
-    setFilesReferenceData(state, action: PayloadAction<TFilesReferenceData>) {
-      const filesReferenceData = action.payload;
-      state.filesReferenceData = filesReferenceData;
-    },
-    setHtmlReferenceData(state, action: PayloadAction<THtmlReferenceData>) {
-      const htmlReferenceData = action.payload;
-      state.htmlReferenceData = htmlReferenceData;
-    },
     setIsContentProgrammaticallyChanged(state, action: PayloadAction<boolean>) {
       const isContentProgrammaticallyChanged = action.payload;
       state.isContentProgrammaticallyChanged = isContentProgrammaticallyChanged;
@@ -56,10 +44,6 @@ const referenceSlice = createSlice({
     },
   },
 });
-export const {
-  setFilesReferenceData,
-  setHtmlReferenceData,
-  setIsContentProgrammaticallyChanged,
-  setIsCodeTyping,
-} = referenceSlice.actions;
+export const { setIsContentProgrammaticallyChanged, setIsCodeTyping } =
+  referenceSlice.actions;
 export const ReferenceReducer = referenceSlice.reducer;

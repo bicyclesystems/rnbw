@@ -1,5 +1,5 @@
 import { TProjectContext } from "@_redux/main/fileTree";
-import { TFilesReference, THtmlElementsReference } from "@rnbws/rfrncs.design";
+import { TFilesReference, THtmlElementsReference } from "@_redux/main/reference";
 
 export type TSession = {
   context: TProjectContext;

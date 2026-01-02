@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SVGIcon } from "@src/components";
-import { THtmlElementsReference } from "@rnbws/rfrncs.design";
+import { THtmlElementsReference } from "@_redux/main/reference";
 
 const spanStyles: React.CSSProperties = {
   width: "calc(100% - 32px)",

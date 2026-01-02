@@ -47,7 +47,7 @@ import {
   TreeItem,
 } from "@src/sidebarView/treeComponents";
 import { useNavigate } from "react-router-dom";
-import { THtmlElementsReference } from "@rnbws/rfrncs.design";
+import { THtmlElementsReference } from "@_redux/main/reference";
 
 const AutoExpandDelayOnDnD = 1 * 1000;
 const dragAndDropConfig = {

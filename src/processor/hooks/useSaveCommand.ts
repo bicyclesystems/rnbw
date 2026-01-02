@@ -51,9 +51,6 @@ export const useSaveCommand = () => {
       case "Save":
         if (!isSaving.current) onSaveCurrentFile();
         break;
-      case "SaveAll":
-        onSaveProject();
-        break;
       default:
         return;
     }
@@ -97,8 +94,6 @@ export const useSaveCommand = () => {
     dispatch(setFileTree(_ffTree as TFileNodeTreeData));
   }, [project, fileTree, fileHandlers, currentFileUid]);
 
-  const onSaveProject = useCallback(async () => {}, []);
-
   const debouncedAutoSave = useCallback(
     debounce(
       () => dispatch(setCurrentCommand({ action: "Save" })),
@@ -107,5 +102,5 @@ export const useSaveCommand = () => {
     [],
   );
 
-  return { onSaveCurrentFile, onSaveProject, debouncedAutoSave };
+  return { onSaveCurrentFile, debouncedAutoSave };
 };

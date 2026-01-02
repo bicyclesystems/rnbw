@@ -2,7 +2,7 @@ import { useCallback, useRef } from "react";
 
 import { editor } from "monaco-editor";
 
-export const useReferneces = () => {
+export const useReferences = () => {
   const monacoEditorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const setMonacoEditorRef = useCallback(
     (editorInstance: editor.IStandaloneCodeEditor | null) => {

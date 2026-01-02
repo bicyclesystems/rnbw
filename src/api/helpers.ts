@@ -8,7 +8,6 @@ import {
 import { THtmlReferenceData } from "@src/types";
 
 import {
-  TBasicNodeData,
   TNode,
   TNodeReferenceData,
   TNodeTreeData,
@@ -67,25 +66,6 @@ export const getNodeChildIndex = (parentNode: TNode, node: TNode): number => {
   }
 
   return childIndex;
-};
-export const getNodeUidsFromPaths = (
-  validNodeTree: TNodeTreeData,
-  paths: string[],
-): TNodeUid[] => {
-  const pathsObj: { [path: string]: true } = {};
-  paths.map((path) => {
-    pathsObj[path] = true;
-  });
-
-  const _uids: TNodeUid[] = [];
-  const uids = getSubNodeUidsByBfs(RootNodeUid, validNodeTree);
-  uids.map((uid) => {
-    const { data } = validNodeTree[uid];
-    const { path } = data;
-    if (pathsObj[path]) _uids.push(uid);
-  });
-
-  return getValidNodeUids(validNodeTree, _uids);
 };
 export const getValidNodeUids = (
   tree: TNodeTreeData,
@@ -177,65 +157,6 @@ export const isRenameFileAction = (actionName: string): boolean => {
   return actionName.startsWith(RenameFileActionPrefix) ? true : false;
 };
 
-// -------------------------------
-export const getPrevSiblingNodeUid = (
-  tree: TNodeTreeData,
-  node: TNode,
-): TNodeUid => {
-  let beforeUid = "" as TNodeUid;
-
-  const parentNode = tree[node.parentUid!];
-  for (const uid of parentNode.children) {
-    if (uid === node.uid) break;
-    beforeUid = uid;
-  }
-
-  return beforeUid;
-};
-export const getValidPrevNodeUid = (
-  tree: TNodeTreeData,
-  node: TNode,
-): TNodeUid => {
-  let prevNodeUid = "" as TNodeUid;
-
-  const parentNode = tree[node.parentUid!];
-  for (const uid of parentNode.children) {
-    if (uid === node.uid) break;
-
-    const childNode = tree[uid];
-    const childNodeData = childNode.data as TBasicNodeData;
-    if (!childNodeData.valid) continue;
-
-    prevNodeUid = uid;
-  }
-
-  return prevNodeUid === "" ? parentNode.uid : prevNodeUid;
-};
-export const getNodeDepth = (tree: TNodeTreeData, uid: TNodeUid): number => {
-  let nodeDepth = 0,
-    node = tree[uid];
-
-  while (node.uid !== RootNodeUid) {
-    node = tree[node.parentUid!];
-    ++nodeDepth;
-  }
-
-  return nodeDepth;
-};
-export const getNodeDepthExternal = (
-  tree: TNodeTreeData,
-  uid: TNodeUid,
-): number => {
-  let nodeDepth = 0,
-    node = tree[uid];
-
-  while (node.uid !== RootNodeUid) {
-    node = tree[node.parentUid!];
-    ++nodeDepth;
-  }
-
-  return nodeDepth;
-};
 export const isUidDecoration = (decoration: editor.IModelDecoration) => {
   return decoration.options.className?.startsWith("uid-");
 };

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import { useDispatch } from "react-redux";
 
@@ -14,11 +14,6 @@ export const useFavicon = (
   const dispatch = useDispatch();
 
   const { workspace, project, currentFileUid, validNodeTree } = useAppState();
-
-  const isFirst = useRef(true);
-  useEffect(() => {
-    isFirst.current = true;
-  }, [currentFileUid]);
 
   useEffect(() => {
     setFaviconFallback(false);

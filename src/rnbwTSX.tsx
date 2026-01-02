@@ -15,7 +15,7 @@ import { MainContext } from "@_redux/main";
 import { setCurrentCommand } from "@_redux/main/cmdk";
 import { useAppState } from "@_redux/useAppState";
 
-import { useCmdk, useHandlers, useInit, useReferneces } from "@src/hooks";
+import { useCmdk, useHandlers, useInit, useReferences } from "@src/hooks";
 import Processor from "@src/processor";
 import ResizablePanels from "@_components/ResizablePanels";
 import { debounce } from "@src/helper";
@@ -75,7 +75,7 @@ function MainPage() {
     useAppState();
 
   const { monacoEditorRef, setMonacoEditorRef, iframeRefRef, setIframeRefRef } =
-    useReferneces();
+    useReferences();
 
   const { importProject, closeNavigator, reloadCurrentProject } = useHandlers();
   const { onNew, onUndo, onRedo, onClear, onJumpstart } = useCmdk({

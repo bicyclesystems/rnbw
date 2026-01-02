@@ -1,9 +1,4 @@
 import { FileChangeAlertMessage, RootNodeUid } from "@src/rnbwTSX";
-import {
-  htmlElementsReferences,
-  THtmlElementsReference,
-} from "@rnbws/rfrncs.design";
-import { THtmlElementsReferenceData } from "@src/types";
 
 import {
   _path,
@@ -98,31 +93,20 @@ export const getNormalizedPath = (
   return { isAbsolutePath, normalizedPath };
 };
 export const getIndexHtmlContent = () => {
-  const htmlElementsReferenceData: THtmlElementsReferenceData = {};
-  htmlElementsReferences.map((htmlRefElement: THtmlElementsReference) => {
-    const pureTag =
-      htmlRefElement["Name"] === "Comment"
-        ? "comment"
-        : htmlRefElement["Tag"]?.slice(1, htmlRefElement["Tag"].length - 1);
-    htmlElementsReferenceData[pureTag] = htmlRefElement;
-  });
-
   const doctype = "<!DOCTYPE html>\n";
-  const hardcodedHtml = `<html>
+  const html = `<html>
   <head>
     <title>Untitled</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    
+
   </body>
 </html>
   `;
-  const html = hardcodedHtml;
 
-  const indexHtmlContent = doctype + html;
-  return indexHtmlContent;
+  return doctype + html;
 };
 export const getInitialCssContent = () => {
   const css = "";

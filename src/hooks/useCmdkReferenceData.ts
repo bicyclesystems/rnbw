@@ -9,7 +9,7 @@ import { useAppState } from "@_redux/useAppState";
 import cmdkRefActions from "../commandMenu/Actions.csv";
 //@ts-expect-error csv files
 import cmdkRefJumpstart from "../commandMenu/Jumpstart.csv";
-import { filesReferences } from "@rnbws/rfrncs.design";
+import { filesReferences } from "@_redux/main/reference/rfrncs";
 import {
   TCmdkContext,
   TCmdkContextScope,

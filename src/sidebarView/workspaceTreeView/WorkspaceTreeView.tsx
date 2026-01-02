@@ -42,7 +42,7 @@ import {
   TreeItem,
 } from "@src/sidebarView/treeComponents";
 import { NodeIcon } from "./workspaceComponents/NodeIcon";
-import { TFilesReference } from "@rnbws/rfrncs.design";
+import { TFilesReference } from "@_redux/main/reference";
 import useRnbw from "@_services/useRnbw";
 
 const AutoExpandDelayOnDnD = 1 * 1000;

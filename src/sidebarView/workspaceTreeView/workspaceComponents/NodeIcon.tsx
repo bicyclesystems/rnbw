@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { SVGIcon } from "@src/components";
 import { TreeItem } from "react-complex-tree";
-import { TFilesReference } from "@rnbws/rfrncs.design";
+import { TFilesReference } from "@_redux/main/reference";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface NodeIconProps<T = any> {

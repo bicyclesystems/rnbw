@@ -22,7 +22,6 @@
   "dependencies": {
     "@monaco-editor/react": "^4.4.6",
     "@reduxjs/toolkit": "^2.1.0",
-    "@rnbws/rfrncs.design": "^0.0.2",
     "buffer": "^6.0.3",
     "cmdk": "^0.1.20",
     "diff-match-patch": "^1.0.5",

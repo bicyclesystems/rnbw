@@ -35,7 +35,7 @@ import {
 } from "@_redux/main/processor";
 import { AnyFunction } from "./rnbw";
 import { NavigateFunction } from "react-router-dom";
-import { TFilesReference } from "@rnbws/rfrncs.design";
+import { TFilesReference } from "@_redux/main/reference";
 import { FileNode } from "@_redux/main";
 import { notify } from "./services/notificationService";
 

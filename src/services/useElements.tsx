@@ -363,8 +363,6 @@ export default function useElements() {
     }
   };
 
-  const plainPaste = () => {};
-
   const group = async (params: Igroup = {}) => {
     if (!checkAllResourcesAvailable() || !codeViewInstanceModel) return;
     const { skipUpdate } = params;
@@ -889,7 +887,6 @@ export default function useElements() {
     setSelectedElements,
     cut,
     paste,
-    plainPaste,
     group,
     ungroup,
     move,

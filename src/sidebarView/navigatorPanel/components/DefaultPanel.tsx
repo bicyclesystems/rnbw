@@ -29,12 +29,7 @@ export const DefaultPanel = () => {
   return (
     <>
       <div className="gap-s align-center" onClick={onProjectClick}>
-        <div
-          onClick={(e) => {
-            e.stopPropagation();
-            console.log("folder icon clicked");
-          }}
-        >
+        <div onClick={(e) => e.stopPropagation()}>
           <SVGIcon className="icon-xs" name="folder" />
         </div>
         <span
