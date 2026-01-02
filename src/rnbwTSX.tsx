@@ -1,6 +1,4 @@
 import "./rnbw.css";
-import "@rnbws/renecss/dist/rene.min.css";
-import "@rnbws/svg-icon.js";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import * as ReactDOMClient from "react-dom/client";
 import { Provider, useDispatch, useSelector } from "react-redux";
