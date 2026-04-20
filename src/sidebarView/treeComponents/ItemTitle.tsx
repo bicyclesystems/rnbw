@@ -16,7 +16,7 @@ export const ItemTitle = React.memo(
 
         {isChanged && (
           <div
-            className="radius-s foreground-primary"
+            className="radius-s inverse-primary"
             title="unsaved file"
             style={{ width: "6px", height: "6px" }}
           />

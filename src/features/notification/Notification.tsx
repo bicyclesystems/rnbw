@@ -77,7 +77,7 @@ export const Notification: React.FC<NotificationProps> = ({
   }, [editorInstance, type, data, id, removeNotification]);
 
   return (
-    <div className="radius-s background-primary padding-m gap-s align-center justify-center box box-l shadow animate duration-normal ease-in">
+    <div className="radius-s background-primary padding-m gap-s align-center justify-center flex-1 flex width-full shadow animate duration-normal ease-in">
       <SVGIcon name={getToastIcon()} prefix="raincons" className="icon-xs" />
 
       <span className="text-s">{data.message}</span>

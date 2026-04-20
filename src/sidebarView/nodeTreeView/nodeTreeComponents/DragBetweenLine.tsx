@@ -34,7 +34,7 @@ export const DragBetweenLine = React.memo(
     return (
       <div
         {...lineProps}
-        className={"foreground-tertiary"}
+        className={"inverse-tertiary"}
         style={{
           position: "absolute",
           right: "0",

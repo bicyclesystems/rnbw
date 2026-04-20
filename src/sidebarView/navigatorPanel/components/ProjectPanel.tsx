@@ -18,7 +18,7 @@ export const ProjectPanel: FC<{ unsavedProject: boolean }> = ({
         <span className="text-s">{project.name}</span>
         {unsavedProject && (
           <div
-            className="radius-s foreground-primary"
+            className="radius-s inverse-primary"
             title="unsaved file"
             style={{ width: "6px", height: "6px" }}
           />

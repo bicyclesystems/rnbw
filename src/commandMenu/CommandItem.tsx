@@ -39,7 +39,7 @@ export const CommandItem = ({
       onSelect={() => onSelect(command)}
       onMouseEnter={onMouseEnter}
     >
-      <div className="justify-stretch padding-s align-center justify-center">
+      <div className="justify-between padding-s align-center justify-center">
         <div className="gap-s align-center justify-center">
           <div className="padding-xs">
             {isSettingsGroup() ? (

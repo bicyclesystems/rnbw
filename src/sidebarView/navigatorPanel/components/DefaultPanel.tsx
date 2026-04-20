@@ -78,7 +78,7 @@ export const DefaultPanel = () => {
 
           {fileNode && fileNode.data.changed && (
             <div
-              className="radius-s foreground-primary"
+              className="radius-s inverse-primary"
               title="unsaved file"
               style={{ width: "6px", height: "6px" }}
             />

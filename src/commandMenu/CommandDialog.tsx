@@ -227,7 +227,7 @@ export const CommandDialog = ({ onClear, onJumpstart }: CommandDialogProps) => {
       <div
         className={
           SINGLE_CMDK_PAGE.includes(currentCmdkPage)
-            ? "box-l direction-column align-stretch box"
+            ? "flex width-full direction-column align-stretch flex-1"
             : ""
         }
         style={{
@@ -241,7 +241,7 @@ export const CommandDialog = ({ onClear, onJumpstart }: CommandDialogProps) => {
         }}
       >
         {/* menu list - left panel */}
-        <div className="padding-m box">
+        <div className="padding-m flex-1">
           <div className="direction-row align-stretch">
             <Command.List
               style={{
