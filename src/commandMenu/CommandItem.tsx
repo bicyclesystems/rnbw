@@ -39,11 +39,11 @@ export const CommandItem = ({
       onSelect={() => onSelect(command)}
       onMouseEnter={onMouseEnter}
     >
-      <div className="justify-stretch padding-s align-center">
-        <div className="gap-s align-center">
+      <div className="justify-stretch padding-s align-center justify-center">
+        <div className="gap-s align-center justify-center">
           <div className="padding-xs">
             {isSettingsGroup() ? (
-              <div className="radius-m icon-xs align-center background-tertiary" />
+              <div className="radius-l icon-xs align-center justify-center background-tertiary" />
             ) : typeof command.Icon === "string" && command.Icon !== "" ? (
               <SVGIcon name={command.Icon} className="icon-xs" />
             ) : (

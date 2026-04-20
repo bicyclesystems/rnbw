@@ -13,7 +13,7 @@ export const ProjectPanel: FC<{ unsavedProject: boolean }> = ({
 
   return (
     <>
-      <div className="gap-s align-center" onClick={onProjectClick}>
+      <div className="gap-s align-center justify-center" onClick={onProjectClick}>
         <SVGIcon name="folder" className="icon-xs" />
         <span className="text-s">{project.name}</span>
         {unsavedProject && (

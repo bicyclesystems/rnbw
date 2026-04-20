@@ -207,7 +207,7 @@ export const CommandDialog = ({ onClear, onJumpstart }: CommandDialogProps) => {
     >
       {/* search input */}
       <div
-        className={`gap-m box-l padding-m justify-start align-center ${validMenuItemCount !== 0 && "border-bottom"}
+        className={`gap-m box-l padding-m justify-start align-center justify-center ${validMenuItemCount !== 0 && "border-bottom"}
             `}
       >
         {isPageOpenedFromActions && (
@@ -301,7 +301,7 @@ export const CommandDialog = ({ onClear, onJumpstart }: CommandDialogProps) => {
         {currentCmdkPage === "Jumpstart" && (
           <>
             <div
-              className="padding-m align-center border-left"
+              className="padding-m align-center justify-center border-left"
               style={{ width: "200%" }}
             >
               {Object.keys(iconMappping).map((key, index) => (
@@ -309,7 +309,7 @@ export const CommandDialog = ({ onClear, onJumpstart }: CommandDialogProps) => {
                   id={`label${index + 1}`}
                   className={
                     currentFocusedMenuItem.name === key
-                      ? "column justify-center align-center"
+                      ? "column justify-center align-center justify-center"
                       : "hidden"
                   }
                   key={index}

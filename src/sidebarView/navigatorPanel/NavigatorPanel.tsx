@@ -141,7 +141,7 @@ export default function NavigatorPanel() {
           className="border-bottom padding-s"
         >
           <div
-            className="gap-s justify-start align-center"
+            className="gap-s justify-start align-center justify-center"
             style={{ overflow: "hidden", width: "100%", position: "relative" }}
             onClick={onPanelClick}
             ref={navigatorPanelRef}
@@ -155,7 +155,7 @@ export default function NavigatorPanel() {
               <DefaultPanel />
             )}
             <div
-              className="align-center background-primary"
+              className="align-center justify-center background-primary"
               style={{
                 position: "absolute",
                 right: "0px",

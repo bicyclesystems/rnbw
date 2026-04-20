@@ -379,7 +379,7 @@ export default function WorkspaceTreeView() {
               <>
                 <form
                   {...props.formProps}
-                  className={"align-center justify-start"}
+                  className={"align-center justify-center justify-start"}
                 >
                   <input
                     id={"FileTreeView-RenameInput"}

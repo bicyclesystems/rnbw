@@ -88,7 +88,7 @@ export const AdditionalPanel: FC<AdditionalPanelProps> = ({
                 onMouseOver={() => setHoveredIndex(index)}
                 onMouseOut={() => setHoveredIndex(null)}
               >
-                <div className="gap-s align-center">
+                <div className="gap-s align-center justify-center">
                   <div
                     style={{
                       backgroundColor: iconBackgroundColor,

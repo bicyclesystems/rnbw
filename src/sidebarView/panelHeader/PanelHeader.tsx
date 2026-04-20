@@ -11,7 +11,7 @@ export const PanelHeader: FC<PanelHeaderProps> = ({
   return (
     <div
       id={id}
-      className={`flex justify-stretch align-center ${className}`}
+      className={`flex justify-stretch align-center justify-center ${className}`}
       style={{ height, boxSizing: "content-box" }}
       onClick={onClick}
     >

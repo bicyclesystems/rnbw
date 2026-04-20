@@ -5,7 +5,7 @@ export const ItemTitle = React.memo(
   ({ title, isChanged = false }: ItemTitleProps) => {
     return (
       <span
-        className="justify-start text-s gap-s align-center"
+        className="justify-start text-s gap-s align-center justify-center"
         style={{
           width: "100%",
           textOverflow: "ellipsis",

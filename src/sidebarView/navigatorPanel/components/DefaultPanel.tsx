@@ -28,7 +28,7 @@ export const DefaultPanel = () => {
 
   return (
     <>
-      <div className="gap-s align-center" onClick={onProjectClick}>
+      <div className="gap-s align-center justify-center" onClick={onProjectClick}>
         <div onClick={(e) => e.stopPropagation()}>
           <SVGIcon className="icon-xs" name="folder" />
         </div>
@@ -54,7 +54,7 @@ export const DefaultPanel = () => {
       )}
 
       {fileNode && (
-        <div className="gap-s align-center" onClick={onFileClick}>
+        <div className="gap-s align-center justify-center" onClick={onFileClick}>
           <SVGIcon
             className="icon-xs"
             name={
